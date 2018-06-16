@@ -2,16 +2,21 @@
 <html>
     <head>
         <title>Array Looping</title>
+        <!--allows 2 way communication with user -->
+        
         <script>
             var cars = ["Cougar", 'Jeep', 'Audi', 'BMW', 'Ford', 'Toyota', "Honda"]; 
-            var ticks = cars.length;
-            var x = 0; 
-            var out = "";
+            //how many members in the array?
+            //console.log(cars.length);
+            //without knowing size of array, loop until all members acted on
+            var ticks = 7; //cars.length;
+            var x = 0; //counter
+            var out = "";//output initialized as blank string
             while (x < ticks)
             {
                 out += cars[x];
                 out += "<br/>";
-                console.log(out);
+                //console.log(out);
                 x++;
             }
             
