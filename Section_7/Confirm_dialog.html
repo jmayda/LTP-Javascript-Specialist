@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Confirm Dialogs</title>
+        <!--allows 2 way communication with user -->
+        
+        <script>
+            window.onload = function()
+            {
+                var returned = confirm("Are you ready?"); 
+                // use to ask if sure want to delete an item
+                //alert(returned);
+                if(returned)
+                {
+                    console.log("Glad you are ready!");
+                    
+                } 
+                else
+                {
+                    console.log("Get ready we are moving ahead");
+                }
+                  
+            }
+            
+            function alertUser(e)
+            {
+                //alert("Button Pressed");
+                alert(e.target.id);
+            }
+            
+        
+        
+        </script>
+    </head>
+    
+    <body>
+        
+    </body>
+</html>

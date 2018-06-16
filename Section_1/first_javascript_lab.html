@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>First Javascript Lab</title>
+        <!--<sript src="main.js"></sript>-->
+        
+        <script>
+            window.onload = function() 
+            {
+            document.getElementById("consoleButton").addEventListener('click', firstResponse);
+            
+            document.getElementById("browserButton").addEventListener('click', secondResponse);
+                
+            document.getElementById("somethingButton").addEventListener('click', thirdResponse);
+            }
+            
+            function firstResponse(e)
+            {
+                console.log("Thanks for clicking the console button!");
+                
+            }
+            
+            function secondResponse(e)
+            {
+                console.log("Thanks for clicking the browser button!");
+                
+            }
+            
+           function thirdResponse(e)
+            {
+                console.log("Thanks for clicking the SOMETHING button!");
+                
+            }
+           
+                
+            
+        </script>
+    </head>
+    
+    <body>
+        <h1>She sells sea shells by the seashore.</h1>
+        <button id="consoleButton">Click me to output the console!</button>
+        <button id="browserButton">Click me to output the browser!</button>
+        <button id="somethingButton">Something Button</button>
+    </body>
+    
+</html>

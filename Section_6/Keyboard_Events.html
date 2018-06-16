@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Events</title>
+        <script>
+            window.onload = function()
+            {
+              var textBox = document.getElementById('myText');
+              
+              textBox.onkeypress = function(e)
+              {
+                  console.log(e);
+                  if(e.key=="e")
+                      {
+                          //console.log("EEEEEE!"); returns EEE.. when the letter e is pressed on keyboard
+                          
+                          if (e.key == "e")
+                          {
+                              textBox.style.display = "none"; //makes textbox disappear leaving only Type Here: that precedes it
+                          }
+                          
+                          if (e.key == "E" && e.shiftKey == true)
+                          {
+                            textBox.style.display = "none";
+                          } //either E and shiftkey to make event happen i.e. make text box disapper. 
+                      }
+              }
+            }
+        </script>
+    </head>
+    
+    <body>
+        <label for="myText">Type Here:</label>
+        <input type="text" id="myText" />
+        <div id="target"></div>
+        <div id="result"></div>
+    </body>
+</html>

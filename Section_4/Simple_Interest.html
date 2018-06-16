@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Interest</title>
+        <script>
+            
+            window.onload = function()
+            {
+                //simple interest on savings account.
+                //need to know amount deposited, length of deposit and interest rate - user entry
+                document.getElementById('btnCalc').addEventListener('click', calculateInterest);
+                
+            }
+            function calculateInterest(e)
+            { //Need amount invested, number of months and interest rate
+                var amount = parseFloat(document.getElementById('amount').value);
+                var term = parseFloat(document.getElementById('term').value);
+                var interest = parseFloat(document.getElementById('interest').value);
+                
+                //console.log(amount);
+                //console.log(term);
+                //console.log(interest);
+                
+                //create loop for each month, start with balance, calculate interest and get new balance.
+                
+                var out=""; 
+                var x = 0;
+                while (x < term)
+                {
+                   
+                    amount = amount * (1 + (interest/12)*.01);
+                    //console.log(Math.floor(amount));
+                    out += "Month" + (x+1) + " $" + Math.floor(amount) + '<br/>';
+                    x++;
+                    
+                }
+                
+                document.getElementById('result').innerHTML = out
+                
+            }
+        </script>
+    </head>
+    
+    <body>
+        <!--user inputs-->
+        <label for="amount">Amount Invested:</label>
+        <input type="number" id="amount" /><br/>
+        <label for="term">How many months</label>
+        <input type="number" id="term" /><br/>
+        <label for="interest">Interest Rate:</label>
+        <input type="number" id="interest" /><br/>
+        <!--Button to perform calculation-->
+        <button id='btnCalc'>Calculate Interest</button>
+        <div id='result'></div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Looping</title>
+        <!--allows 2 way communication with user -->
+        
+        <script>
+            var cars = ["Cougar", 'Jeep', 'Audi', 'BMW', 'Ford', 'Toyota', "Honda"]; 
+            //how many members in the array?
+            //console.log(cars.length);
+            //without knowing size of array, loop until all members acted on
+            var ticks = 7; //cars.length;
+            var x = 0; //counter
+            var out = "";//output initialized as blank string
+            while (x < ticks)
+            {
+                out += cars[x];
+                out += "<br/>";
+                //console.log(out);
+                x++;
+            }
+            
+            document.getElementById("result").innerHTML= out;
+            
+            var cities = ["Miami", "New York", "Boston", "Chicago", "New Orleans", "Austin"];
+            var out ="";
+            
+            for(var z=0; z < cities.length; z++)
+            {
+                out += cities[z]; 
+                out += "<br/>";
+                console.log(out);
+            }
+             
+            document.getElementById('result').innerHTML = out;
+            
+        </script>
+    </head>
+    
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <style>
+            #targetA, #targetB
+            {
+                width: 200px;
+                height: 200px;
+                
+            }
+            
+            #targetA
+            {
+                background-color: #900;
+            }
+            
+            #targetB
+            {
+               background-color: #009;
+               margin-top: 20px; 
+            }
+        </style>
+        
+        <script>
+        window.onload = function()
+        {
+            //get input for targetA and targetB
+            var a = document.getElementById('targetA'); 
+            var b = document.getElementById('targetB');
+            
+            a.addEventListener('click', processEvent);
+            b.addEventListener('click', processEvent);
+         }
+        
+        function processEvent(e)
+        {
+            console.log(e);
+        }
+            
+        </script>
+    </head>
+    
+    <body>
+       <div id="targetA" ></div>
+       <div id="targetB" ></div>
+       <div id="result"></div>
+    </body>
+</html>

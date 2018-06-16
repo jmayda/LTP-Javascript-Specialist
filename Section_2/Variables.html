@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Variables</title>
+        <script>
+            var age = 66;
+            window.onload = function()
+            {
+                var score; //declaring varible
+                score = 1000; //assigning initial value to variable
+                
+                age = 66; //combined declaration and initialization of variable 'age'
+                
+                document.getElementById('result').innerHTML = score + " Age " + age; 
+                
+                //out();
+                
+                
+            }
+            function out()
+            {
+                document.getElementById('result').innerHTML = "Age = " + age; //run this will get error about variable 'age' not being declared; need to declare variable age in script area above window.onload
+                
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

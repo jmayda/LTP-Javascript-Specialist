@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anonymous Return</title>
+        <script>
+            window.onload = function() //anonymous function, no name, only called if specific event occurs ie. window.onload
+            {
+                alert('window.onload!');
+                btnPress = document.getElementById('myButton'); 
+            
+            
+                btnPress.onclick = function()
+                {
+                    alert('Thanks for pressing me!');
+                }
+                btnPress.onmouseover = function()
+                {
+                    alert('Thanks for Mousing over me!');
+                }
+            }
+        </script>
+        
+    </head>
+    
+    <body>
+        <div id='result'></div><br/>
+        <button id="myButton">Press Me!</button>
+    </body>
+</html>

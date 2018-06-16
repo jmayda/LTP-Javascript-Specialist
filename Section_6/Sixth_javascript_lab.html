@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>Lab #6</title>
+        <style>
+            #eventBox1, #eventBox2
+            {
+                width: 200px;
+                height: 200px;
+                margin: 5px;
+                color: black; 
+                background-color: red;
+                
+            }
+            
+        </style>
+        
+        <script>
+            window.onload = function()
+            {
+                var randomBox1 = document.getElementById("eventBox1");
+                
+                var randomBox2 = document.getElementById('eventBox2');
+                
+                randomBox2.onmouseover = function()
+                {
+                    alert("You hovered over the red  box");
+                }
+                
+                randomBox1.onclick = function(e)
+                {
+                    alert("X = " + e.clientX + 'and Y = ' + e.clientY);
+                }
+                
+                window.onkeypress = function()
+                {
+                    alert('You pressed the AnyKey');
+                }
+            }
+            
+        </script>
+    </head>
+    
+    <body>
+       <div id="eventBox1" >Click Me!</div>
+       <div id="eventBox2" >Hover over me.</div>
+        <h1>Why doesn't it say anything?
+        </h1>
+       
+    </body>
+</html>

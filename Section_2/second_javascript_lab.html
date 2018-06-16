@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab #2</title>
+        <!--<script src="main.js"></script> -->
+        <script>
+            window.onload = function()
+            {
+                document.getElementById("addingButton").addEventListener("click", addNumbers);
+                
+                 document.getElementById("multiplyButton").addEventListener("click", multiplyNumbers);
+                                
+            }
+            
+            function addNumbers(e)
+            {
+                var answer = "";
+                
+                answer += +
+                document.getElementById('inputOne').value + + document.getElementById('inputTwo').value
+                
+                alert(answer)
+                
+            }
+            
+            function multiplyNumbers(e)
+            {
+                var answer = "";
+                
+                answer += +
+                document.getElementById('inputOne').value * 
+                 document.getElementById("inputTwo").value
+                
+                alert(answer)
+                
+                
+            }
+        </script>
+    </head>
+    
+    <body>
+        <h1>Let's do some math!</h1>
+        <button id="addingButton">Add!</button>
+        <button id="multiplyButton">Multiply!</button>
+        <input id="inputOne" type="number" />
+        <input id="inputTwo" type="number" />
+    </body>
+</html>

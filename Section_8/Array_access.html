@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Access</title>
+        <!--allows 2 way communication with user -->
+        
+        <script>
+            window.onload = function()
+            {
+                
+                var teams = ["Yankees","Mets", "Giants", "Jets", "Knicks", "Nets", "Rangers", "Islanders" ];
+                console.log(teams);
+                
+                var computers = new Array("Compaq", "TRS-80", "Apple2", "Commodore 64", "Osborn Pro", "Macintosh", "TI994A");
+                console.log(computers);
+                
+                var family = [];//empty array named family which can have elements added later
+                
+                document.getElementById('result').innerHTML = computers[3]; 
+                //array starts at position '0' so this would correspond to Commodore 64
+                console.log(computers[3]);
+                
+                document.getElementById('result').innerHTML += "<br/>" + teams[5]; 
+                /*should be Nets
+                if put in teams[10] - no such data exists program returns "undefined" */
+                console.log(teams[5]);
+            
+                /* if want to add components to "family" or to anyother array defined here:*/
+                
+                family[0] = "Jaro";
+                family[1] = "Jarito";
+                family[2] = "Samantha";
+                family[3] = "Raquel";
+                computers[8] = "Amiga";
+                
+                console.log(family[2]);
+                document.getElementById('result').innerHTML += "<br/>" + family[2]; 
+                
+                console.log(computers[2]);
+                document.getElementById('result').innerHTML += "<br/>" + computers[2];
+                
+            }   
+            
+        
+        </script>
+    </head>
+    
+    <body>
+        <div id="result"></div>
+    </body>
+</html>

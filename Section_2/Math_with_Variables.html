@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Math with Variables</title>
+        <script>
+            window.onload = function()
+            {var operand1 = 1235;
+            var operand2 = 854.2;
+            var operand3 = 15; 
+            var out = ""; //document.getElementById is very resource heavy process; send all outputs to "out" and post them all at once
+            
+            out += "Addition: " + (operand1 + operand2);
+            out += "<br/>Subtraction: " + (operand1 - operand2);
+            out += "<br/>Multiplication: " + (operand1 * operand2);
+            out += "<br/>Division: " + (operand1 / operand2);
+            out += "<br/>Mod: " + (10 % 3);
+            out += "<br/>Even: " + (10 % 3);
+            out += "<br/>Odd: " + (10 % 2);
+            
+            out += "</br>++: " + (++operand3);//add one to variable and evaluate - prefix
+            out += "</br>++: " + (operand3++);//evaluate the variable and then add one - postfix
+            out += "</br>++: " + (operand3);
+            
+            out += "</br>--: " + (--operand3);//subtract one to variable and evaluate - prefix
+            out += "</br>--: " + (operand3--);//evaluate the variable and then subtract one - postfix 
+            out += "</br>--: " + (operand3);
+            
+            out += "<br/>+=3 " + (operand3 += 3);
+            out += "<br/>-=3 " + (operand3 -= 3);
+            out += "<br/>*=3 " + (operand3 *= 3); 
+             
+             
+           document.getElementById('result').innerHTML = out;
+            
+            }
+        </script>
+    
+    </head>
+    
+    <body>
+        <div id='result'>
+        
+        </div>
+    </body>
+</html>

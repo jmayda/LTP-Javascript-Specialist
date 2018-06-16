@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab Exercise #5</title>
+        <script>
+            window.onload = function()
+            {
+                document.getElementById('hoursButton').addEventListener('click', runCheckHours);
+                 document.getElementById('subtractNumber').addEventListener('click', subtractNumber)
+                
+            }
+                    
+            
+            function runCheckHours()
+            {
+                var hoursSlept = 
+                document.getElementById("hoursInput").value;
+                
+                
+                checkHours(hoursSlept);
+                
+             }
+            
+            function checkHours(hoursSlept)
+            {
+                if (hoursSlept >= 8)
+                {
+                    return alert ("You're getting too much sleep");
+                }
+                else
+                {
+                    return alert ("Get some more sleep");
+                }
+            } 
+            
+           function subtractNumber(x,y)
+            {
+                var x = document.getElementById('firstNumber').value;
+                console.log('firstnumber);
+                
+                var y = document.getElementById('secondNumber').value;
+                
+                var c = x - y; 
+                return c; 
+                
+                document.getElementById('result').innerHTML+= "<br/>" + c;
+            } 
+            
+        </script>
+    </head>
+    
+    <body>
+        <h1>Getting enough sleep?</h1>
+        <input id="hoursInput" type="number" />
+        <button id="hoursButton">Check</button><br/><br/>
+        First Number <input id="firstNumber" type="number" /><br/>
+        Second Number <input id="secondNumber" type="number" /><br/><br/>
+        <button id="subtractNumber">Subtract</button>
+        <div id="result"></div>
+    </body>
+</html>

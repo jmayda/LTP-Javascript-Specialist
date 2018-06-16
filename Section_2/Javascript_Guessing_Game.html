@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Guessing Game</title>
+        
+        <script>
+            var randomNumber; 
+            
+            window.onload = function() //makes the entire page read before starting any individual process
+            {
+                randomNumber = Math.floor((Math.random() * 10) + 1); 
+                // gives us a random number between 1-10
+                console.log(randomNumber); //show random number picked for testing
+                
+                document.getElementById('btnCheck').addEventListener("click", checkGuess);
+            }
+        
+            function checkGuess(e)
+            {
+                //compare random number generated to user entry guessed number
+                var userGuess = document.getElementById('guess').value; 
+                //take value of whatever user entered as guessed number
+                
+                if(userGuess == randomNumber)
+                {
+                    document.getElementById('result').innerHTML = "<h1>Correct</h1>";
+                }
+                
+                else
+                {
+                   document.getElementById('result').innerHTML = "<h1>Wrong. Try again. </h1>"; 
+                    
+                }
+                
+                
+                
+                
+            }
+        </script>
+    </head>
+    
+    <body>
+        <label for="guess">Guess a Number between 1 and 10:</label>
+        <input type="number" min="1" max="10" id="guess" />
+        <button id="btnCheck">Am I right?</button>
+        <div id='result'></div>
+        <!--random number generator; compare result with user entry; they got it right or they didn't and can try again-->
+    </body>
+</html>

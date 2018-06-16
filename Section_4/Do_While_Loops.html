@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>While Loop</title>
+        <script>
+            window.onload = function()
+            {
+                var counter = 0;
+                               
+                do 
+                {
+                    document.getElementById('result').innerHTML += "<br/>" + counter; 
+                    counter++;
+                }
+                while (counter < 15); // do while will iterate at least once even if condition is false because the condition for execution is after the execution steps themselves
+                
+                
+            }
+        
+        </script>
+    </head>
+    
+    <body>
+        <div id='result'></div>
+    </body>
+</html>

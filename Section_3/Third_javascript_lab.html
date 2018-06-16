@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab #3</title>
+        <script>
+            window.onload = function()
+            {
+                alert("Let's play. Think of a rock, a paper or scissors"); 
+                
+                document.getElementById('playButton').addEventListener('click', randomNumber);
+                
+            }
+        
+            function randomNumber(e)
+            {
+                var computerAnswer = Math.random(); 
+                
+                if (computerAnswer <= .33)
+                {
+                   alert("Computer chose rock");
+                }
+                if (computerAnswer > .33 && computerAnswer <=.66)
+                {
+                   alert("Computer chose paper");
+                }
+                else
+                {
+                   alert("Computer chose paper");
+                }
+                //document.getElementById('result').innerHTML
+            }
+            
+        
+        </script>
+    </head>
+    
+    <body>
+        <h1>Let's play rock, paper, scissors!</h1>
+        <button id="playButton">Play!</button>
+    </body>
+</html>

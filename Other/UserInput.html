@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <script type="text/javascript">
+            function greetUser()
+            {
+                var userInput = document.getElementById('userName').value;
+                document.getElementById('greeting').innerHTML  = 'Hello, ' + userInput;
+                log.console(userInput);
+            }
+        
+        </script>
+    </head>
+    
+    <body>
+        <p id='greeting'>Welcome</p>
+        <input type="text" id='userName' value='Enter your Name.' />
+        <input type="button" onclick="greetUser()" value='Say Hello' />
+        
+    </body>
+</html>

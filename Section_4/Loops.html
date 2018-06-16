@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>While Loop</title>
+        <script>
+            window.onload = function()
+            {
+                //while loop continues running as long as a specific condition is TRUE
+                
+                var counter = 0;
+                //keeps track of how many times go through loop
+                
+                while (counter<101)
+                {
+                    //do this: 
+                    document.getElementById('result').innerHTML += "<br/>" + counter; 
+                    counter++;
+                }
+                
+            }
+        
+        </script>
+    </head>
+    
+    <body>
+        <div id='result'></div>
+    </body>
+</html>
